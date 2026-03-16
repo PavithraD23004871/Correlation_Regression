@@ -17,13 +17,9 @@ If y represents the dependent variable and x the independent variable, this rela
 
 # Procedure :
 
-![image](https://github.com/PavithraD23004871/Correlation_Regression/assets/138955967/a56222a8-4f1e-4032-aa8e-c0a3f5e1d930)
-
+![image](https://user-images.githubusercontent.com/104613195/168225866-ac8f6610-bdc3-4ac2-a24e-2b24ba08e189.png)
 
 # Program :
-
-Name :Pavithra D
-Reference Number:212223230146
 ```
 import numpy as np
 import math
@@ -31,6 +27,7 @@ import matplotlib.pyplot as plt
 x=[ int(i) for i in input().split()]
 y=[ int(i) for i in input().split()]
 N=len(x)
+print("N =", N)
 Sx=0
 Sy=0
 Sxy=0
@@ -51,17 +48,18 @@ print("The Regression line Y on X is ::: y = %0.3f + %0.3f (x-%0.3f)"%(ymean,byx
 plt.scatter(x,y)
 def Reg(x):
   return ymean + byx*(x-xmean)
-x=np.linspace(20,80,51)
-y1=Reg(x)
-plt.plot(x,y1,'r')
+x_line = np.linspace(min(x), max(x), 100)
+y1 = Reg(x_line)
+plt.plot(x_line, y1, 'r')
 plt.xlabel('x-data')
 plt.ylabel('y-data')
 plt.legend(['Regression Line','Data points'])
+plt.show()
+
 ```
 # Output
+<img width="1045" height="691" alt="image" src="https://github.com/user-attachments/assets/2855f959-878f-4fe0-a6bb-a33a876dbdd8" />
 
-![image](https://github.com/PavithraD23004871/Correlation_Regression/assets/138955967/0747ea68-b93d-4cdb-8514-d536ce0be9f0)
 
-# Result
-
-By using python programming to analyse given data using coeffificient of correlation and regression line is successfully executed. 
+# result
+The correlation and regression for data analysis of objects from feeder using probability distribution are calculated.
